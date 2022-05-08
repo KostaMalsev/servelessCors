@@ -8,7 +8,7 @@ export default async function handler(request, response) {
   //let urlR = new URL('https:/www.apple.com');
   
   //const {status, data} = await getRequest(decodeURIComponent(request.query.url));
-  const {status, data} = await getRequest(decodeURIComponent('https:/www.apple.com'));
+  const {status, data} = await getRequest(decodeURIComponent('https://www.apple.com'));
   
   response.status(status).send(data);
   
