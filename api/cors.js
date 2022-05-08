@@ -9,7 +9,7 @@ export default async function handler(request, response) {
   //const {status, data} = await getRequest(decodeURIComponent(request.query.url));
   const {status, data} = await getRequest(decodeURIComponent(url));
   
-  throw request;
+  let data = request;
   response.status(status).send(data);
   
   
