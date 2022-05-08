@@ -11,7 +11,7 @@ export default async function handler(request, response) {
   //response.status(status).send(data);
   //response.status(status).send(`<script> console.log($request)</script>`);
   
-    response.status(200).send(`$request`)
+    response.status(200).send(`<p> $request</p>`)
 
   
   
