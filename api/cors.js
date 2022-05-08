@@ -6,7 +6,7 @@ export default async function handler(request, response) {
   console.log(request);
   
   //Get params from the query:
-  let cUrl = request.get("q");
+  let cUrl = request.searchParams.get("q");
 
   const {status, data} = await getRequest(decodeURIComponent(cUrl));
   
