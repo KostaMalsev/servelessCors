@@ -5,6 +5,8 @@ export default async function handler(request, response) {
   
   console.log(request);
   
+  let urlR = new URL(request);
+  
   //Get params from the query:
   let cUrl = request.searchParams.get("q");
 
