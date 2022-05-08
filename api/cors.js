@@ -4,9 +4,7 @@ export default async function handler(request, response) {
   const https = require('https');
   
   console.log(request);
-  
-  //let urlR = new URL('https:/www.apple.com');
-  
+    
   //const {status, data} = await getRequest(decodeURIComponent(request.query.url));
   const {status, data} = await getRequest(decodeURIComponent('https://www.apple.com'));
   
