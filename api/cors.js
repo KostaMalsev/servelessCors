@@ -10,7 +10,6 @@ export default async function handler(request, response) {
 
   const {status, data} = await getRequest(decodeURIComponent(cUrl));
   
-  //let data = request;
   response.status(status).send(data);
   
   
