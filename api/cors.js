@@ -8,7 +8,7 @@ export default async function handler(request, response) {
   let urlR = new URL(request);
   
   //Get params from the query:
-  let cUrl = request.searchParams.get("q");
+  let cUrl = urlR.searchParams.get("q");
 
   const {status, data} = await getRequest(decodeURIComponent(cUrl));
   
