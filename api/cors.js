@@ -5,7 +5,7 @@ export default async function handler(request, response) {
   
   console.log(request);
   
-  let urlR = new URL('www.apple.com');
+  let urlR = new URL('https:/www.apple.com');
   
   //Get params from the query:
   let cUrl = urlR.searchParams.get("q");
