@@ -5,8 +5,8 @@ export default async function handler(request, response) {
   
   console.log(request);
     
-  //const {status, data} = await getRequest(decodeURIComponent(request.query.url));
-  const {status, data} = await getRequest(decodeURIComponent('https://www.apple.com'));
+  const {status, data} = await getRequest(decodeURIComponent(request.query.url));
+  //const {status, data} = await getRequest(decodeURIComponent('https://www.apple.com'));
   
   response.status(status).send(data);
   //response.status(status).send(`<script> console.log($request)</script>`);
