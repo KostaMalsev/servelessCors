@@ -5,7 +5,9 @@ export default async function handler(request, response) {
   
   console.log(request);
   
-  const {status, data} = await getRequest(decodeURIComponent(request.query.url));
+  let url = 'https://apple.com'
+  //const {status, data} = await getRequest(decodeURIComponent(request.query.url));
+  const {status, data} = await getRequest(decodeURIComponent(url));
   
   response.status(status).send(data);
   
