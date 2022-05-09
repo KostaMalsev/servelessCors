@@ -1,13 +1,25 @@
 <body>
 
-My one pager app
+  My one pager app
+  <div id="page"> </div>
 
-<script>
+  <script>
+    
+    async function fetchPage() {
+      
+      //let externalPage = 'https://www.berryscript.com/';
+      let externalPage = 'https://developer.mozilla.org/'; //'https://threejs.org/';
 
-console.log('My slim one-pager')
+      let page = await fetch(externalPage);
+      let pg = document.getElementById("page");
+      pg.innerHTML = page;
 
-  
-</script>
+      console.log('My slim one-pager');
+    }
+
+    fetchPage();
+    
+  </script>
 
 
 </body>
