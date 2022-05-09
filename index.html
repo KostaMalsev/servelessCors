@@ -1,20 +1,20 @@
 <body>
 
-  My one pager app
+  One pager app which shows plain html of MDN site:
+  
+  
   <div id="page"> </div>
 
   <script>
     
     async function fetchPage() {
       
-      //let externalPage = 'https://serveless-cors.vercel.app/api/cors?url=https://www.berryscript.com/';
-      //let externalPage = 'api/cors?url=https://www.berryscript.com/';
       let externalPage = 'api/cors?url=https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS';
-      //let externalPage = 'https://serveless-cors.vercel.app?url=https://codeit.codes/homepage/featured-pic.png'; //'https://threejs.org/';
 
       let page = await fetch(externalPage);
       let page_ = await page.text();
       let pg = document.getElementById("page");
+      
       pg.innerHTML = page_;
 
     }
